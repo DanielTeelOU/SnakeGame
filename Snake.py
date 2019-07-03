@@ -59,7 +59,6 @@ class Player:
  
             self.updateCount = 0
  
- 
     def moveRight(self):
         self.direction = 0
  
