@@ -4,6 +4,8 @@ import pygame # to build the game
 from pygame.locals import * # for menu
 import tkinter as tk # for message box
 from tkinter import messagebox # for message box
+import sys # for menu / scores
+import os # for menu / scores
 
 # for the geometry
 class cube(object):
@@ -188,17 +190,17 @@ def main():
 
         # ranks
         if 1 < len(s.body) <= 5:
-            rank = 'Uncultured Swine'
+            rank = 'n Uncultured Swine'
         if 6 <= len(s.body) <= 15:
-            rank = 'Novice'
+            rank = ' Novice'
         if 16 <= len(s.body) <= 20:
-            rank = 'Average Gamer'
+            rank = 'n Average Gamer'
         if 21 <= len(s.body) <= 30:
-            rank = 'Respectable Gamer'
+            rank = ' Respectable Gamer'
         if 31 <= len(s.body) <= 40:
-            rank = 'Gemini Man'
+            rank = ' Gemini Man'
         if 41 <= len(s.body) <= 50:
-            rank = 'Retro God'
+            rank = ' Retro God'
 
         if s.body[0].pos == snack.pos:
             s.addCube()
@@ -208,7 +210,7 @@ def main():
         for x in range(len(s.body)):
             if s.body[x].pos in list(map(lambda z:z.pos, s.body[x+1:])):
                 start = 8
-                message_box("Game Over", 'Your score was ' + str(len(s.body)) + ' points.' + '\nYou have received the title of ' + rank + ".\nWould you like to retry?") # message box content. Shows score and asks the player if they wanna replay
+                message_box("Game Over", 'Your score was ' + str(len(s.body)) + ' points.' + '\nYou are a' + rank + ".\nWould you like to retry?") # message box content. Shows score and asks the player if they wanna replay
                 s.reset((10, 10)) # if the ok option is clicked
                 break
 
