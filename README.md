@@ -1,2 +1,2 @@
 # SnakeGame
-Snake video game built using pythonspot tutorial as a base.
+Snake video game built using the tutorial from techwithtim.net as a base.
