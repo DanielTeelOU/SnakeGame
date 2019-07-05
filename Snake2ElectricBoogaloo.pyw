@@ -4,8 +4,6 @@ import pygame # to build the game
 from pygame.locals import * # for menu
 import tkinter as tk # for message box
 from tkinter import messagebox # for message box
-import sys # for menu / scores
-import os # for menu / scores
 
 # for the geometry
 class cube(object):
