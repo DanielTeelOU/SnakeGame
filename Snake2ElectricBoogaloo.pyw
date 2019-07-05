@@ -186,6 +186,7 @@ def main():
         clock.tick(start) # fps / speed
         s.move()
 
+        # ranks
         if 1 < len(s.body) <= 5:
             rank = 'Uncultured Swine'
         if 6 <= len(s.body) <= 15:
